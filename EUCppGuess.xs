@@ -16,6 +16,6 @@ PROTOTYPES: DISABLE
 PROTOTYPES: ENABLE
 
 void
-returnOne(id)
-    long id
+returnOne()
+
 

@@ -1,0 +1,31 @@
+---
+abstract: 'A c++ distribution for testing the toolchain'
+author:
+  - 'Helmut Wollmersdorfer <helmut.wollmersdorfer@gmail.com>'
+build_requires:
+  ExtUtils::CppGuess: '0.11'
+  ExtUtils::MakeMaker: '0'
+  Test::More: '0.88'
+configure_requires:
+  ExtUtils::CppGuess: '0.11'
+  ExtUtils::MakeMaker: '0'
+dynamic_config: 0
+generated_by: 'ExtUtils::MakeMaker version 7.04, CPAN::Meta::Converter version 2.150005'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Acme-TestDist-Cpp-EUMM-EUCppGuess
+no_index:
+  directory:
+    - t
+    - inc
+recommends: {}
+requires:
+  perl: '5.006000'
+resources:
+  bugtracker: https://github.com/wollmers/Acme-TestDist-Cpp-EUMM-EUCppGuess/issues
+  homepage: https://github.com/wollmers/Acme-TestDist-Cpp-EUMM-EUCppGuess
+  repository: https://github.com/wollmers/Acme-TestDist-Cpp-EUMM-EUCppGuess.git
+version: '0.01'
+x_serialization_backend: 'CPAN::Meta::YAML version 0.012'
