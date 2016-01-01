@@ -12,7 +12,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw( return_one ) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw( );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 require XSLoader;
 XSLoader::load('Acme::TestDist::Cpp::EUMM::EUCppGuess', $VERSION);
@@ -26,9 +26,11 @@ sub return_one {
 1;
 __END__
 
+=encoding utf8
+
 =head1 NAME
 
-Acme::TestDist::Cpp::EUMM::EUCppGuess - A c++ distribution for testing the toolchain
+Acme::TestDist::Cpp::EUMM::EUCppGuess - Example C++ distribution with MakeMaker and CppGuess to test the tool chain
 
 =begin html
 
@@ -47,10 +49,23 @@ Acme::TestDist::Cpp::EUMM::EUCppGuess - A c++ distribution for testing the toolc
 
 =head1 DESCRIPTION
 
-ImgSeek (http://www.imgseek.net/) is an implementation of Haar wavelet
-decomposition techniques to find similar pictures in a library. This
-module is port of the ImgSeek library to Perl's XS. It can deal with
-image objects produced by the C<Imager>, C<Image::Imlib2> and C<GD> libraries.
+This distribution is useful for
+
+=over
+
+=item *
+
+being a template to start your own CPAN XS/C++ distribution
+
+=item *
+
+test the tool chain of an individual environment
+
+=item *
+
+test the tool chains of CPAN infrastructure
+
+=back
 
 =head1 EXPORT
 
@@ -58,17 +73,27 @@ None by default, but the following functions are available:
 
 =head2 return_one()
 
-Returns the number 1.
+Returns the number 1. Useful for test.
+
+=head2 returnOne()
+
+Internal use.
+
+=head1 VERSIONING
+
+After reaching near perfect quality version numbers will be in the form
+year.month.minor, i.e. YYYY.MM.99.
 
 =head1 SEE ALSO
 
-
+C<ExtUtils::CppGuess>
+C<Extutils::MakeMaker>
 
 =head1 SOURCE REPOSITORY
 
 L<http://github.com/wollmers/Acme-TestDist-Cpp-EUMM-EUCppGuess>
 
-=head1 MAINTAINER
+=head1 AUTHOR
 
 Helmut Wollmersdorfer E<lt>helmut.wollmersdorfer@gmail.comE<gt>
 
@@ -78,15 +103,11 @@ Helmut Wollmersdorfer E<lt>helmut.wollmersdorfer@gmail.comE<gt>
 
 =end html
 
-=head1 AUTHOR
-
-Helmut Wollmersdorfer, E<lt>helmut.wollmersdorfer@gmail.comE<gt>
-
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2015, 2016 Helmut Wollmersdorfer
 
-This library is free software; as it is a derivative work of imgseek,
-this library is distributed under the same terms (GPL) as imgseek.
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut

@@ -18,14 +18,8 @@ else {
      Helmut
      Wollmersdorfer
      GPL
-	 Haar
-     ImgSeek
-     Niederberger
-     cleardb
-     imgseek
-     savedb
-     queryImgID
-     removeID
+     CppGuess
+     VERSIONING
   ));
   all_pod_files_spelling_ok();
 }

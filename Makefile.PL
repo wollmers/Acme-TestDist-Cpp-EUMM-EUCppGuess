@@ -14,7 +14,11 @@ WriteMakefile(
     VERSION_FROM      => 'lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm', # finds $VERSION
     MIN_PERL_VERSION  => '5.6.0',
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-
+    dist	 => {
+	    PREOP	=> 'pod2text lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm | tee README >$(DISTVNAME)/README; chmod -R u=rwX,go=rX . ;',
+	    COMPRESS	=> 'gzip -9v',
+	    SUFFIX	=> '.gz',
+	},
     $guess->makemaker_options,
 
     TEST_REQUIRES		=> {
@@ -22,7 +26,7 @@ WriteMakefile(
     },
     META_MERGE => {
         'meta-spec' => { version => 2 },
-        license  => [ 'gpl_1' ],
+        license  => [ 'perl_5' ],
         prereqs => {
   			runtime => {
     			requires => {
