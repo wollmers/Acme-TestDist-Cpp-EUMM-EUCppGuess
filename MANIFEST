@@ -1,0 +1,11 @@
+Changes
+Makefile.PL
+MANIFEST
+ppport.h
+README
+EUCppGuess.xs
+t/use.t
+lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm
+META.yml                                 Module meta-data (added by MakeMaker)
+nuratest.cpp
+nuratest.h

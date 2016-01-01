@@ -19,7 +19,7 @@ pm_to_blib
 *~
 *.bak
 ._*
-/Image-Seek-*
+/Acme-*
 /.build
 /_build*
 /Build
