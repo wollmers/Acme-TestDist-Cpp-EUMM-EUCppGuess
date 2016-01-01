@@ -15,7 +15,7 @@ WriteMakefile(
     MIN_PERL_VERSION  => '5.6.0',
     PREREQ_PM         => {}, # e.g., Module::Name => 1.1
     dist	 => {
-	    PREOP	=> 'pod2text lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm | tee README >$(DISTVNAME)/README; pod2text lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm > README.md; chmod -R u=rwX,go=rX . ;',
+	    PREOP	=> 'pod2text lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm | tee README >$(DISTVNAME)/README; pod2markdown lib/Acme/TestDist/Cpp/EUMM/EUCppGuess.pm > README.md; chmod -R u=rwX,go=rX . ;',
 	    COMPRESS	=> 'gzip -9v',
 	    SUFFIX	=> '.gz',
 	},
